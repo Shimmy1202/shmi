@@ -1,0 +1,21 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: gray;
+      }
+    </style>
+  </defs>
+  <g id="invisible_box" data-name="invisible box">
+    <rect id="長方形_60" data-name="長方形 60" class="cls-1" width="20" height="20"/>
+  </g>
+  <g id="icons_Q2" data-name="icons Q2" transform="translate(0.861 3.603)">
+    <path id="パス_26" data-name="パス 26" class="cls-2" d="M18.862,21.89h-.213a.852.852,0,0,1-.6-1.064L21.459,8.946a.852.852,0,0,1,1.618.426L19.671,21.294A.809.809,0,0,1,18.862,21.89Z" transform="translate(-11.208 -8.462)"/>
+    <path id="パス_27" data-name="パス 27" class="cls-2" d="M7.122,22.459a.852.852,0,0,0,.554-1.49L4.142,17.776l3.534-3.193A.852.852,0,0,0,6.569,13.3L2.311,17.137a.852.852,0,0,0,0,1.277l4.258,3.832A.809.809,0,0,0,7.122,22.459Z" transform="translate(-2.023 -11.16)"/>
+    <path id="パス_28" data-name="パス 28" class="cls-2" d="M32.745,22.275a.852.852,0,0,1-.554-1.49l3.534-3.193L32.192,14.4A.852.852,0,1,1,33.3,13.121l4.258,3.832a.852.852,0,0,1,0,1.277L33.3,22.062A.809.809,0,0,1,32.745,22.275Z" transform="translate(-19.13 -10.976)"/>
+  </g>
+</svg>

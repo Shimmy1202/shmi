@@ -1,0 +1,15 @@
+<svg id="グループ_68" data-name="グループ 68" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: gray;
+      }
+    </style>
+  </defs>
+  <rect id="長方形_17" data-name="長方形 17" class="cls-1" width="20" height="20"/>
+  <path id="パス_12" data-name="パス 12" class="cls-2" d="M19.791,7H2.847A.847.847,0,0,0,2,7.847V20.555a.847.847,0,0,0,.847.847H19.791a.847.847,0,0,0,.847-.847V7.847A.847.847,0,0,0,19.791,7Zm-.847,12.708H3.694v-8.6l7.413,4.363a.381.381,0,0,0,.424,0l7.413-4.49Zm-7.413-6.184a.381.381,0,0,1-.424,0L3.694,8.694H18.944Z" transform="translate(-1.046 -4.003)"/>
+</svg>

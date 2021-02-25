@@ -1,0 +1,19 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: gray;
+      }
+    </style>
+  </defs>
+  <g id="invisible_box" data-name="invisible box">
+    <rect id="長方形_59" data-name="長方形 59" class="cls-1" width="20" height="20"/>
+  </g>
+  <g id="icons_Q2" data-name="icons Q2" transform="translate(2.535 1.267)">
+    <path id="パス_25" data-name="パス 25" class="cls-2" d="M13.6,3a4.647,4.647,0,1,0,4.647,4.647A4.647,4.647,0,0,0,13.6,3Zm7.224,13.1A13.223,13.223,0,0,0,13.6,13.984a13.561,13.561,0,0,0-7.224,2.07L6,16.307V19.9a.845.845,0,0,0,.845.845H20.363a.845.845,0,0,0,.845-.845V16.307Z" transform="translate(-6 -3)"/>
+  </g>
+</svg>
