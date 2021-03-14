@@ -45,7 +45,7 @@ const MailBtn = styled.a`
     margin-top: 25%;
   }
   @media only screen and (max-width: 599px) {
-    margin-top: 50%;
+    margin-top: 30%;
     text-align: center;
   }
 `;
