@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import { Menu } from "./components/Menu";
 import { Contact } from "./pages/Contact";
@@ -8,6 +9,9 @@ import { Works } from "./pages/Works";
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const Contents = styled.div`
@@ -16,12 +20,16 @@ const Contents = styled.div`
   top: 80px;
   left: 0;
   right: 0;
-  margin: 0 80px 0 40px;
+  margin: 0 40px;
   width: 100%;
   max-width: 900px;
   height: 6px;
   border-radius: 3px;
   box-shadow: 2px 2px 2px #e9eaee inset, -2px -2px 2px #fff inset;
+  @media only screen and (max-width: 1024px) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 `;
 
 const Main = styled.main`
@@ -38,6 +46,13 @@ const Main = styled.main`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media only screen and (max-width: 1024px) {
+    height: calc(100vh - 180px);
+  }
+`;
+
+const MainSwitch = styled(Switch)`
+  height: 100%;
 `;
 
 const Footer = styled.footer`
@@ -51,6 +66,9 @@ const Footer = styled.footer`
   height: 6px;
   border-radius: 3px;
   box-shadow: 2px 2px 2px #e9eaee inset, -2px -2px 2px #fff inset;
+  @media only screen and (max-width: 1024px) {
+    bottom: 0;
+  }
 `;
 
 const Copyright = styled.small`
@@ -62,29 +80,30 @@ const Copyright = styled.small`
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #949494;
+  @media only screen and (max-width: 1024px) {
+    padding-top: 16px;
+    font-size: 14px;
+  }
 `;
 
 function App() {
-  const [tab, setTab] = useState("profile");
   return (
     <Container>
-      <Menu tab={tab} setTab={setTab} />
-      <Contents>
-        <Main>
-          {tab === "profile" ? (
-            <Profile />
-          ) : tab === "works" ? (
-            <Works />
-          ) : tab === "contact" ? (
-            <Contact />
-          ) : (
-            <h1>404Not Found</h1>
-          )}
-        </Main>
-        <Footer>
-          <Copyright>©︎ 2021 Shm!</Copyright>
-        </Footer>
-      </Contents>
+      <Router>
+        <Menu />
+        <Contents>
+          <Main>
+            <MainSwitch>
+              <Route exact path="/" component={Profile} />
+              <Route path="/works" component={Works} />
+              <Route path="/contact" component={Contact} />
+            </MainSwitch>
+          </Main>
+          <Footer>
+            <Copyright>©︎ 2021 Shm!</Copyright>
+          </Footer>
+        </Contents>
+      </Router>
     </Container>
   );
 }

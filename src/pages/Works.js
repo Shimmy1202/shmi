@@ -15,6 +15,10 @@ const Title = styled.h2`
   margin: 40px 0 68px;
   font-size: 30px;
   text-align: left;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 32px;
+    text-align: center;
+  }
 `;
 
 const WorkUl = styled.ul`
@@ -23,6 +27,9 @@ const WorkUl = styled.ul`
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  @media only screen and (max-width: 599px) {
+    justify-content: center;
+  }
 `;
 
 const WorkLi = styled.li`
@@ -43,34 +50,46 @@ const WorkLi = styled.li`
       color: #949494;
       box-shadow: 3px 3px 4px transparent, -3px -3px 4px transparent,
         2px 2px 2px #dddde1 inset, -2px -2px 2px #ffffff inset;
+      > a {
+        > p {
+          color: #949494;
+        }
+        > img {
+          opacity: 0.7;
+        }
+      }
     }
   }
-  > a {
-    &:link {
-      color: #42475a;
-    }
-    &:hover {
-      color: #949494;
-    }
-    &:visited {
-      transition: box-shadow 0.3s ease-in-out;
-      color: #42475a;
-    }
+  @media only screen and (max-width: 599px) {
+    width: 88%;
+    margin-bottom: 24px;
   }
 `;
 
-const WorkImg = styled.img`
+const CardImg = styled.img`
   width: 100%;
   max-width: 430px;
   max-height: 216px;
   object-fit: cover;
   border: solid 1px #eeeeee;
   border-radius: 6px;
+  transition: opacity 0.3s ease-in-out;
 `;
 
-const WorkName = styled.p`
-  margin: 16px 0 0;
-  font-weight: 600;
+const CardTitle = styled.p`
+  margin: 10px 0 0;
+  color: #42475a;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out;
+`;
+
+const CardRole = styled.p`
+  color: #949494;
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 14px;
 `;
 
 export const Works = () => {
@@ -80,41 +99,36 @@ export const Works = () => {
       <div>
         <WorkUl>
           <WorkLi>
-            <WorkImg src={`${process.env.PUBLIC_URL}/images/portfolio.png`} />
-            <WorkName>【Shm!】ポートフォリオサイト version1.0</WorkName>
+            <CardImg src={`${process.env.PUBLIC_URL}/images/portfolio.png`} />
+            <CardTitle>Shm!</CardTitle>
+            <CardRole>UI/UX デザイン,コーディング</CardRole>
           </WorkLi>
           <WorkLi>
-            <WorkImg src={`${process.env.PUBLIC_URL}/images/angfa.png`} />
-            <WorkName>
-              産学連携 アンファー株式会社「LP制作」デザイン賞受賞作品
-            </WorkName>
+            <CardImg src={`${process.env.PUBLIC_URL}/images/angfa.png`} />
+            <CardTitle>スカルプD baby LPサイトリニューアル</CardTitle>
+            <CardRole>UX/UI デザイン</CardRole>
           </WorkLi>
           <WorkLi>
             <a href="https://github.com/h-jun01/yakei" target="_blank">
-              <WorkImg src={`${process.env.PUBLIC_URL}/images/yakei.png`} />
-              <WorkName>
-                【YAKEI】U-22プログラミングコンテスト2020 応募作品
-              </WorkName>
+              <CardImg src={`${process.env.PUBLIC_URL}/images/yakei.png`} />
+              <CardTitle>YAKEI</CardTitle>
+              <CardRole>UX/UI デザイン</CardRole>
             </a>
           </WorkLi>
           <WorkLi>
             <a href="https://hew-funfiction.web.app/" target="_blank">
-              <WorkImg
+              <CardImg
                 src={`${process.env.PUBLIC_URL}/images/funfiction.png`}
               />
-              <WorkName>
-                【FunFiction】2年次学内コンテスト「HAL EVENT WEEK
-                2020」銅賞受賞作品
-              </WorkName>
+              <CardTitle>FunFiction</CardTitle>
+              <CardRole>企画,UI/UX デザイン</CardRole>
             </a>
           </WorkLi>
           <WorkLi>
             <a href="https://youtu.be/Oft-5r43k7o?t=1807" target="_blank">
-              <WorkImg src={`${process.env.PUBLIC_URL}/images/b-unlock.png`} />
-              <WorkName>
-                【FunFiction】2年次学内コンテスト「HAL EVENT WEEK
-                2020」銅賞受賞作品
-              </WorkName>
+              <CardImg src={`${process.env.PUBLIC_URL}/images/b-unlock.png`} />
+              <CardTitle>b-UNLOCK</CardTitle>
+              <CardRole>企画,UI/UX デザイン</CardRole>
             </a>
           </WorkLi>
         </WorkUl>

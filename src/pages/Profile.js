@@ -15,12 +15,19 @@ const Title = styled.h2`
   margin: 40px 0 68px;
   font-size: 30px;
   text-align: left;
+  @media only screen and (max-width: 1024px) {
+    text-align: center;
+    margin-bottom: 32px;
+  }
 `;
 
 const Txt = styled.p`
   width: 100%;
   font-size: 16px;
   line-height: 200%;
+  @media only screen and (max-width: 1024px) {
+    margin: 0 32px;
+  }
 `;
 
 const IntroWrapper = styled.div`
@@ -28,11 +35,17 @@ const IntroWrapper = styled.div`
   flex-wrap: wrap;
   margin-top: 60px;
   width: 100%;
+  @media only screen and (max-width: 1024px) {
+    justify-content: center;
+  }
 `;
 
 const IconWrapper = styled.div`
   margin-right: 40px;
   max-width: 360px;
+  @media only screen and (max-width: 599px) {
+    margin: 0;
+  }
 `;
 
 const Icon = styled.img`
@@ -46,6 +59,13 @@ const ProfUl = styled.ul`
   width: 50%;
   padding: 0;
   margin: 0;
+  @media only screen and (max-width: 599px) {
+    width: 86%;
+    margin-top: 40px;
+    > img {
+      text-align: center;
+    }
+  }
 `;
 
 const ProfLi = styled.li`
@@ -76,6 +96,9 @@ const LiHeding = styled.p`
     border-radius: 3px;
     box-shadow: 2px 2px 2px #e9eaee inset, -2px -2px 2px #fff inset;
   }
+  @media only screen and (max-width: 1024px) {
+    width: 30%;
+  }
 `;
 
 const LiData = styled.p`
@@ -95,9 +118,7 @@ export const Profile = () => {
         最近はUI/UXデザインやReact.js, firebaseの勉強をしています。
         <br />
         <br />
-        このポートフォリオサイトも以前から気になっていたニューモフィズムデザインを参考にして、
-        <br />
-        フロントエンドにReact.js、サイトのホスティングにfirebaseを使用して制作しました。
+        このポートフォリオサイトも以前から気になっていたニューモフィズムデザインを参考にして、フロントエンドにReact.js、サイトのホスティングにfirebaseを使用して制作しました。
       </Txt>
       <IntroWrapper>
         <IconWrapper>
